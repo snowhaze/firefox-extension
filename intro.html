@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+  <title class="i18n">introPageTitle</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<style>
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+		.contents {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			text-align: center;
+			width: 100%;
+		}
+		.header {
+			background: url("images/title.jpg");
+			border: 1em solid #48454d;
+		}
+		.logo {
+			margin: 1em;
+			width: 8em;
+			padding: 5em;
+		}
+		.brand-name{
+			font-size: 3em;
+			background: #48454d;
+			width: 100%;
+			padding: 0.5em 0;
+			justify-content: center;
+		}
+		.brand-name-left{
+			color:#bf9659;
+		}
+		.brand-name-right{
+			color:#fff;
+		}
+		.intro {
+			margin: 4em;
+		}
+		.subtitle {
+			width: 35%;
+			margin: auto;
+		}
+		.feature {
+			width: 60%;
+			margin: 1em auto;
+			display: flex;
+			justify-content: center;
+		}
+		.feature div{
+			margin: 1em;
+		}
+		.feature p {
+			text-align: left;
+		}
+		.screens {
+			width: 100%;
+		}
+		.discover-title {
+			background: #ccc;
+			padding: 2em 0;
+		}
+		.discover {
+			display: inline-flex;
+		}
+		.discover-products {
+			margin: 0 2em;
+		}
+		.discover-icon {
+			width: 4em;
+			height: 4em;
+		}
+		.footer {
+			font-size 0.8em;
+			margin-top: 2em;
+			background-color: #bf9659;
+			font-size: smaller;
+			padding: 0.75em;
+			text-align: center;
+		}
+	
+	</style>
+<div class="contents">
+
+	<div class="header">
+		<div>
+			<img class="logo" src="/images/icon200.png" alt="">
+		</div>
+		<div class="brand-name">
+			<span class="brand-name-left">Snow</span><span class="brand-name-right">Haze</span>
+		</div>
+	</div>
+	<div>
+	<div class="intro">
+		<h1 class="i18n">introTitleMessage</h1>
+		<p class="subtitle i18n">introSubtitleMessage</p>
+	</div>
+
+    <!-- snowhaze features -->
+	<div class="feature">
+		<div style="width:50%">
+			<img class="screens" src="/images/img1.png">
+		</div>
+		<div style="width:50%">
+			<h2 class="feature-title i18n">introFeatureIsolateTitle</h2>
+			<p class="feature-text"><span class="i18n">introFeatureIsolateDescription</span> <span class="cmd" style="color:#bf9659">Ctrl+Alt+T</span>.</p>
+		</div>
+	</div>
+	<div class="feature">
+		<div style="width:50%">
+			<h2 class="feature-title i18n">introFeatureSnowhazeTitle</h2>
+			<p class="feature-text i18n">introFeatureSnowhazeDescription</p>
+		</div>
+		<div style="width:50%">
+			<img class="screens" src="/images/img2.png">
+		</div>
+	</div>
+	<div class="feature">
+		<div style="width:50%">
+			<img class="screens" src="/images/img3.png">
+		</div>
+		<div style="width:50%">
+			<h2 class="feature-title i18n">introFeatureFirefoxTitle</h2>
+			<p class="feature-text i18n">introFeatureFirefoxDescription</p>
+		</div>
+	</div>
+	<div class="feature">
+		<div style="width:50%">
+			<h2 class="feature-title i18n">introHelpImproveTitle</h2>
+			<p class="feature-text i18n">introHelpImproveDescription</p>
+		</div>
+		<div style="width:50%">
+			<img src="/images/img4.png" width=40% alt="">
+		</div>
+	</div>
+
+	<div class="discover-title">
+		<div>
+			<h1 class="i18n">introDiscoverMoreTitle</h1>
+			<p class="subtitle i18n">introDiscoverMoreDescription</p>
+		</div>
+		<div class="discover">
+			<div class="discover-products">
+				<h3 class="i18n">introDiscoverMoreBrowserTitle</h3>
+				<p class="i18n">introDiscoverMoreBrowserDescription	</p>
+				<a class="i18n-link" href="https://snowhaze.com/$$lang$$/browser.html"><img class="discover-icon" src="/images/icon1.png" alt=""></a>
+			</div>
+			<div class="discover-products">
+				<h3 class="i18n">introDiscoverMoreVPNTitle</h3>
+				<p class="i18n">introDiscoverMoreVPNDescription</p>
+				<a class="i18n-link" href="https://snowhaze.com/$$lang$$/vpn.html"><img class="discover-icon" src="/images/icon2.png" alt=""></a>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- privacy policy link -->
+	<div class="footer">
+		<div>
+			<a href="https://snowhaze.com/en/privacy-policy.html" class="i18n">introPrivacyPolicyLinkTitle</a>
+		</div>
+		<div>
+			<p>&copy; 2016 - 2020 Illotros GmbH. All rights reserved.</p>
+			<p><svg width="25" height="25" viewBox="0 0 100 100" style="transform:translateY(7px)"><g>
+			<rect style="fill:#ffffff;" width="100" height="100" x="0" y="0" />
+			<path d="m 0,0 L 100,0 L 100,100 L 0,100 L 0,0 M 20,40 L 20,60 L 40,60 L 40,80 L 60,80 L 60,60 L 80,60 L 80,40 L 60,40 L 60,20 L 40,20 L 40,40 L 20,40 Z" style="fill:#e01a27;" /></g></svg>&nbsp;Software made in Switzerland</p>
+		</div>
+	</div>
+
+</div>
+<script src="/i18n.js"></script>
+</body>
+</html>

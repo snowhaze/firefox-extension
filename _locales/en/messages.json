@@ -1,0 +1,282 @@
+{
+	"extensionName": {
+		"message": "SnowHaze",
+		"description": "The name of the extension"
+	},
+	"extensionDescription": {
+		"message": "Improved Security & Privacy for Firefox",
+		"description": "The description of the extension"
+	},
+	"browserActionTitle": {
+		"message": "SnowHaze",
+		"description": "The title of the browser action"
+	},
+	"newIsolatedTabCommandDescription": {
+		"message": "New isolated tab",
+		"description": "The description of the command to create a new isolated tab"
+	},
+	"IMPORTANT_read_description_IMPORTANT_isolationContextualIdentityName": {
+		"message": "SnowHaze Isolated",
+		"description": "The name of contextual identities created to isolate tabs. !!!IMPORTANT!!!: Do NOT change, translate or otherwise allow for a new value to be looked up for this key without addapting validNames in cleanContexts in background.js !!!IMPORTANT!!!"
+	},
+	"contextualIdentitiesNotEnabledAlertMessage": {
+		"message": "enable privacy.userContext.enabled in your about:config",
+		"description": "The message of the alert to tell users to enable contextual identities"
+	},
+	"contextualIdentitiesNotSupportedOnAndroidAlertMessage": {
+		"message": "Contextual identities are not properly supported on Android. Creating a regular tab instead.",
+		"description": "The message of the alert to tell users to enable contextual identities"
+	},
+	"setFFSettingToDefaultValueButtonTitle": {
+		"message": "Set to Default",
+		"description": "Title of the button to reset a Firefox setting to its default value"
+	},
+	"setFFSettingToSuggestedValueButtonTitle": {
+		"message": "Set to Suggested",
+		"description": "Title of the button to set a Firefox setting to its suggested value"
+	},
+	"cannotChangeFFSettingValuePlacehoderText": {
+		"message": "Cannot do Anything :(",
+		"description": "Text displayed instead of the button when a Firefox setting's value cannot be changed"
+	},
+	"newIsolatedTabButtonTitle": {
+		"message": "New Isolated Tab",
+		"description": "Title of the button to create a new isolated tab"
+	},
+	"settingsButtonTitle": {
+		"message": "Settings",
+		"description": "Title of the button to display the settings options"
+	},
+	"firefoxSettingsSectionTitle": {
+		"message": "Firefox",
+		"description": "Title of the settings section to change Firefox settings"
+	},
+	"globalSnoHazeSettingsSectionTitle": {
+		"message": "SnowHaze",
+		"description": "Title of the settings section to change global SnowHaze settings"
+	},
+	"setAllFirefoxSettingsToSuggestedValuesButtonTitle": {
+		"message": "Set all to Suggested",
+		"description": "Title of the button to set all Firefox settings to their suggested values"
+	},
+	"currentSettingsValueLoadingPlaceholder": {
+		"message": "Loading...",
+		"description": "Placeholder for the current settings value while it is being loaded"
+	},
+	"networkPredictionFirefoxSettingName": {
+		"message": "Network Prediction",
+		"description": "Name of the network prediction Firefox setting"
+	},
+	"networkPredictionFirefoxSettingDescription": {
+		"message": "Preloads pages that you might want to visit and stores them in the cache.",
+		"description": "Description of the network prediction Firefox setting"
+	},
+	"rtcFirefoxSettingName": {
+		"message": "RTC",
+		"description": "Name of the rtc Firefox setting"
+	},
+	"rtcFirefoxSettingDescription": {
+		"message": "Real-time communication allows audio and video communication to work within webpages. It can compromise the security of VPNs by leaking the true IP address.",
+		"description": "Description of the rtc Firefox setting"
+	},
+	"rtcIPFirefoxSettingName": {
+		"message": "RTC IP",
+		"description": "Name of the rtc ip Firefox setting"
+	},
+	"rtcIPFirefoxSettingDescription": {
+		"message": "Sets the privacy/performance tradeoff for WebRTC by defining how the traffic is routed.",
+		"description": "Description of the rtc ip Firefox setting"
+	},
+	"cookiesFirefoxSettingName": {
+		"message": "Cookies",
+		"description": "Name of the cookies Firefox setting"
+	},
+	"cookiesFirefoxSettingDescription": {
+		"message": "Defines the handling of cookies and whether cookies should be treated as session cookies, which are deleted when the browser is closed.",
+		"description": "Description of the cookies Firefox setting"
+	},
+	"isolateFirefoxSettingName": {
+		"message": "Isolate Data",
+		"description": "Name of the isolate Firefox setting"
+	},
+	"isolateFirefoxSettingDescription": {
+		"message": "Associates all data from third-party domains with the domain in the address bar. This prevents third-parties to identify users across different websites.",
+		"description": "Description of the isolate Firefox setting"
+	},
+	"referrerFirefoxSettingName": {
+		"message": "Referer",
+		"description": "Name of the referrer Firefox setting"
+	},
+	"referrerFirefoxSettingDescription": {
+		"message": "Selects whether a referer header is sent. The referer contains the address of the previous page from which a link was followed.",
+		"description": "Description of the referrer Firefox setting"
+	},
+	"resistFingerprintingFirefoxSettingName": {
+		"message": "Resist Fingerprinting",
+		"description": "Name of the resist fingerprinting Firefox setting"
+	},
+	"resistFingerprintingFirefoxSettingDescription": {
+		"message": "Fingerprinting is used by websites to collect data about users. Resisting tells the browser to spoof this information and send generic data that cannot be used for tracking.",
+		"description": "Description of the resist fingerprinting Firefox setting"
+	},
+	"trackingProtectionFirefoxSettingName": {
+		"message": "Tracking Protection",
+		"description": "Name of the tracking protection Firefox setting"
+	},
+	"trackingProtectionFirefoxSettingDescription": {
+		"message": "Blocks requests to domains that are known to engage in cross-site tracking of users.",
+		"description": "Description of the tracking protection Firefox setting"
+	},
+	"forceHTTPSSnowHazeSettingName": {
+		"message": "Force HTTPS",
+		"description": "Name of the force https SnowHaze setting"
+	},
+	"forceHTTPSSnowHazeSettingDescription": {
+		"message": "Forces the browser to establish encrypted HTTPS connection whenever possible. It always connects using HTTPS for websites known to support it.",
+		"description": "Description of the force https SnowHaze setting"
+	},
+	"tryHTTPSFirstSnowHazeSettingName": {
+		"message": "Try HTTPS First",
+		"description": "Name of the try https first SnowHaze setting"
+	},
+	"tryHTTPSFirstSnowHazeSettingDescription": {
+		"message": "Attempts to upgrade some HTTP connections to HTTPS.",
+		"description": "Description of the try https first SnowHaze setting"
+	},
+	"mixedContentBlockingSnowHazeSettingName": {
+		"message": "Mixed Content Blocking",
+		"description": "Name of the mixed content blocking SnowHaze setting"
+	},
+	"mixedContentBlockingSnowHazeSettingDescription": {
+		"message": "Mixed content is content served over HTTP within a HTTPS website. Mixed content can be used to alter website content in order to steal sensitive information or redirect to phising sites.",
+		"description": "Description of the mixed content blocking SnowHaze setting"
+	},
+	"trimTrackingParametersSnowHazeSettingName": {
+		"message": "Trim Tracking Parameters",
+		"description": "Name of the trim tacking parameters SnowHaze setting"
+	},
+	"trimTrackingParametersSnowHazeSettingDescription": {
+		"message": "Identifying information is stripped from personalized URLs, allowing to follow a link without sending data that could be used for tracking.",
+		"description": "Description of the trim tacking parameters SnowHaze setting"
+	},
+	"forgetPrivateSitesSnowHazeSettingName": {
+		"message": "Forget Private Sites",
+		"description": "Name of the forget private sites SnowHaze setting"
+	},
+	"forgetPrivateSitesSnowHazeSettingDescription": {
+		"message": "Private sites are sites that you may not want to appear in your search history, like adult content sites. This setting recognizes these sites and prevents them to land in the history.",
+		"description": "Description of the forget private sites SnowHaze setting"
+	},
+	"settingOnButtonTitle": {
+		"message": "On",
+		"description": "Title of the setting option button when turned on"
+	},
+	"settingOffButtonTitle": {
+		"message": "Off",
+		"description": "Title of the setting option button when turned off"
+	},
+	"openIntroButtonTitle": {
+		"message": "Info",
+		"description": "Title to open the tutorial page of the addon"
+	},
+	"openContactUsTitle": {
+		"message": "Contact Us",
+		"description": "Title to open the snowhaze contact page on the snowhaze website"
+	},
+	"openDashboardButtonTitle": {
+		"message": "VPN Dashboard",
+		"description": "Title to open the zka 2 dashboard page"
+	},
+	"reportIssuesLinkTitle": {
+		"message": "Report an issue",
+		"description": "Title of the link leading to the page where issue can be reported"
+	},
+	"introPageTitle": {
+		"message": "Get Started",
+		"description": "Title of the intro page"
+	},
+	"introTitleMessage": {
+		"message": "Thank you for getting the SnowHaze Extension for Firefox",
+		"description": "Title message of the intro page"
+	},
+	"introSubtitleMessage": {
+		"message": "SnowHaze helps you to enforce your right to privacy by blocking trackers, enforcing secure connections, and avoiding malicious attacks. Read on to get an overview.",
+		"description": "Subtitle message of the intro page"
+	},
+	"introFeatureIsolateTitle": {
+		"message": "Browse in fully isolated tabs",
+		"description": "Title of the presented feature Isolate"
+	},
+	"introFeatureIsolateDescription": {
+		"message": "Open a new SnowHaze tab to isolate your activities between tabs. The tabs behave like individual browsers and websites can't see your activities from other tabs. Isolated tabs are marked by a red line and a fence in the address bar. You can open an isolated tab in the add-on or by using the shortcut",
+		"description": "Description of the presented feature Isolate"
+	},
+	"introFeatureSnowhazeTitle": {
+		"message": "Apply SnowHaze Settings",
+		"description": "Title of the presented feature snowhaze settings"
+	},
+	"introFeatureSnowhazeDescription": {
+		"message": "Change settings options developed by SnowHaze. Switch between the values by clicking. The recommended values appear in green. Hover the settings title to see a description of each setting.",
+		"description": "Description of the presented feature snowhaze settings"
+	},
+	"introFeatureFirefoxTitle": {
+		"message": "Change Firefox Settings",
+		"description": "Title of the presented feature firefox settings"
+	},
+	"introFeatureFirefoxDescription": {
+		"message": "The most important privacy and security features of Firefox are gathered under \"Firefox\". Initially, the settings are set to the Firefox default. Click the values to switch between the options. Recommended values appear in green.",
+		"description": "Description of the presented feature firefox settings"
+	},
+	"introHelpImproveTitle": {
+		"message": "Help Us Improve",
+		"description": "Title of the suggestion to help improve the product"
+	},
+	"introHelpImproveDescription": {
+		"message": "This add-on is brand new and will adapt to your needs over time. Help us make it better by reporting issues and suggesting new feature.",
+		"description": "Description of the suggestion to help improve the product"
+	},
+	"introDiscoverMoreTitle": {
+		"message": "Discover more from SnowHaze",
+		"description": "Title of the discover more from snowhaze section"
+	},
+	"introDiscoverMoreDescription": {
+		"message": "SnowHaze helps you protect your privacy over all your devices.",
+		"description": "Description of the discover more from snowhaze section"
+	},
+	"introDiscoverMoreBrowserTitle": {
+		"message": "Browser",
+		"description": "Title of the product browser in the discover more section"
+	},
+	"introDiscoverMoreBrowserDescription": {
+		"message": "Private browser on iOS",
+		"description": "Description of the product browser in the discover more section"
+	},
+	"introDiscoverMoreVPNTitle": {
+		"message": "VPN",
+		"description": "Title of the product browser in the discover more section"
+	},
+	"introDiscoverMoreVPNDescription": {
+		"message": "Anonymous VPN",
+		"description": "Description of the product browser in the discover more section"
+	},
+	"introPrivacyPolicyLinkTitle": {
+		"message": "Privacy Policy",
+		"description": "Title of the link to the provacy policy"
+	},
+	"errorPageTitle": {
+		"message": "ERROR",
+		"description": "Title of the error page"
+	},
+	"errorPageErrorTitleMessge": {
+		"message": "ERROR",
+		"description": "Heading indicating an error on the error page"
+	},
+	"errorPageErrorComment": {
+		"message": "Isolated tabs do not work on Android.",
+		"description": "Subtitle explaining the error on the error page"
+	},
+	"websiteLocale": {
+		"message": "en",
+		"description": "Locale of The Website to Open"
+	}
+}

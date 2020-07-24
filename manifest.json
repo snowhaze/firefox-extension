@@ -1,0 +1,52 @@
+{
+	"manifest_version":	2,
+	"name":			"__MSG_extensionName__",
+	"version":		"1.0",
+	"description":		"__MSG_extensionDescription__",
+	"default_locale":	"en",
+	"icons":		{
+		"48":		"images/icon48.png",
+		"96":		"images/icon96.png"
+	},
+	"browser_action": {
+		"default_icon":		"images/icon48.png",
+		"default_title":	"__MSG_browserActionTitle__",
+		"default_popup":	"popup.html"
+	},
+	"permissions":	[
+		"*://*/*",
+		"contextualIdentities",
+		"cookies",
+		"history",
+		"privacy",
+		"sessions",
+		"storage",
+		"webRequest",
+		"webRequestBlocking"
+	],
+	"background": {
+			"scripts": [
+				"settings.js",
+				"background.js"
+			]
+	},
+	"commands": {
+		"new-isolated-tab": {
+			"suggested_key": {
+				"default": "Ctrl+Alt+T"
+			},
+			"description": "__MSG_newIsolatedTabCommandDescription__"
+		},
+		"_execute_browser_action": {
+			"suggested_key": {
+				"default": "Ctrl+Alt+S"
+			}
+		}
+	},
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "firefox-extension@snowhaze.com",
+			"strict_min_version": "68.0"
+		}
+	}
+}

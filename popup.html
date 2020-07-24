@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body style="background-color: #fff; color: #000;">
+		<style>
+			body {
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			}
+			.settings-pane-page {
+				display: none;
+			}
+			.settings-pane-label {
+				padding: .3em 1em;
+				cursor: pointer;
+			}
+			#section-settings:checked ~ #settings-pane .settings-pane-page {
+				display: block;
+			}
+			.selection-pane-label {
+				width: 5em;
+				border: 2px solid #bf9659;
+				padding: .3em 1em;
+				text-align: center;
+				cursor: pointer;
+				color: #bf9659;
+			}
+			#section-selection-ff-settings:checked ~ #selection-pane-labels label:nth-child(1) {
+				background-color: #bf9659;
+				color: #312b35;
+			}
+			#section-selection-global:checked ~ #selection-pane-labels label:nth-child(2) {
+				background-color: #bf9659;
+				color: #312b35;
+			}
+			.selection-pane-page {
+				display: none;
+				margin-top: 1em;
+			}
+			#section-selection-ff-settings:checked ~ #selection-pane-pages .selection-pane-page:nth-child(1) {
+				display: block;
+			}
+			#section-selection-global:checked ~ #selection-pane-pages .selection-pane-page:nth-child(2) {
+				display: block;
+			}
+			.selection-pane-page {
+				height: 325px;
+				width: 400px;
+				overflow: auto;
+			}
+			a {
+				color: #312b35;
+				cursor: pointer;
+				margin: 0.5em 0.5em;
+				display: block;
+				text-align: center;
+			}
+			table {
+				table-layout: inherit;
+			}
+			td {
+				word-wrap: break-word;
+			}
+			tr {
+				text-align: left;
+			}
+			td>div:nth-child(1)::after {
+				content: " \0024D8";
+			}
+			tr:last-child td:nth-child(1)::after {
+				content: "";
+			}
+			.i18n-title,div:active{
+				outline: 0;
+			}
+			.newtab {
+				background: #bf9659;
+				border-radius: 10px;
+				padding: 0.3em 2em;
+				font-size: 1.5em;
+			}
+			.setall {
+				font-family: monospace, monospace;
+				font-size: 0.7em;
+				color: green;
+				width: 12em;
+				min-height: 2em;
+				border: none;
+				border-radius: 5px;
+			}
+			.footer {
+				font-size: 0.6em;
+				text-align: left;
+				text-decoration: underline;
+			}
+
+		</style>
+		<div style="width: 100%; display: inline-flex;">
+			<div style="width: 50%; display: inline-flex;">
+				<img style="width: 50px; height:50px; margin:0 0.5em;" alt="" src="/images/icon96.png">
+				<div class="i18n">extensionName</div>
+			</div>
+			<div style="width: 50%; display: inline-flex; justify-content: end;">
+				<!-- icon of info -->
+				<a class="i18n-title" id="info-link" title="openIntroButtonTitle">
+					<svg width="30" height="30" viewBox="0 0 250 250">
+						<g>
+							<path d="M 132,19 A 112,112 0 0 0 19,132 a 112,112 0 0 0 112,112 112,112 0 0 0 112,-112 112,112 0 0 0 -112,-112 z m 10,47 c 5,-3e-6 9,4 9,9 0,5 -4,9 -9,9 -5,0 -9,-4 -9,-9 0,-5 4,-9 9,-9 z m -3,40 h 4 l -13,68 c -0,2 -0,3 -0,4 0,4 3,7 8,7 3,0 7,-0 13,-2 v 5 c -10,4 -18,6 -25,6 -7,0 -11,-4 -11,-12 0,-2 0,-5 1,-9 l 10,-54 -14,-2 v -4 z" style="fill:#48454d;" />
+						</g>
+					</svg>
+				</a>
+				<!-- icon of contact -->
+				<a class="i18n-title" id="contact-link" title="openContactUsTitle">
+					<svg width="30" height="30" viewBox="0 0 260 250">
+						<g>
+							<path d="M 114,172 11,138 252,17 210,201 114,172 v 74 l 46,-60" style="fill:#48454d;stroke:#48454d;stroke-width:10;stroke-linejoin:round;" />
+							<path style="fill:none;stroke:#ffffff;stroke-width:11;stroke-linecap:round;" d="M 84,195 204,74" />
+						</g>
+					</svg>
+				</a>
+				<!-- icon of dashboard -->
+				<a  class="i18n-title" id="dashboard-link" title="openDashboardButtonTitle">
+					<svg width="30" height="30" viewBox="0 0 250 260">
+						<rect style="fill:none;stroke:#48454d;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;" width="230" height="230" x="5" y="15" rx="20" />
+						<g transform="scale(0.8,1.2), translate(7,-28)" style="fill:#48454d;">
+						  <path
+							 d="M 70,164 85,94 H 101 L 81,178 H 58 L 38,94 h 16 z" />
+						  <path
+							 d="m 130,108 v 24 h 6 q 8,0 11,-2 3,-2 3,-9 0,-6 -3,-9 -3,-2 -11,-2 z M 114,94 h 22 q 17,0 25,6 7,6 7,20 0,13 -7,20 -7,6 -25,6 h -6 v 31 h -16 z" />
+						  <path
+							 d="m 181,94 h 17 l 23,61 V 94 h 14 V 178 h -17 l -23,-61 v 61 h -14 z" />
+						</g>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<!-- new tab button -->
+		<div style="width: 100%;">
+			<a id="newtab" class="newtab">
+				<svg width="40" height="40" viewBox="0 0 260 250" style="margin-bottom:-5px">
+					<g style="fill:none;stroke:#312b35;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;">
+					<path d="M 32,77 H 214 M 160,216 H 31 V 46 H 213 V 146 M 176,192 h 52 M 202,166 v 52" />
+					<circle cx="202" cy="193" r="45"/>
+				</svg>
+					<span class="i18n">newIsolatedTabButtonTitle</span> <span class="cmd" style="font-size:0.5em;color:#fff;">Ctrl+Alt+T</span>
+			</a>
+		</div>
+		<!-- settings button -->
+		<a class="footer i18n" id="issues-link" style="position:absolute">reportIssuesLinkTitle</a>
+		<input id="section-settings" name="section-selection-settings" type="radio" style="display: none;">
+		<div id="settings-pane-label" style="display: flex; justify-content: right; margin-bottom: 1em;">
+			<label class="settings-pane-label" for="section-settings"><span class="i18n">settingsButtonTitle</span><img src="/images/setting.png" alt="" style="width:30px;height:30px;padding: 0 10px; margin-bottom: -8px"></label>
+		</div>
+		<!-- settings pane -->
+		<div id="settings-pane">
+			<div class="settings-pane-page">
+				<input id="section-selection-ff-settings" name="section-selection" type="radio" style="display: none;">
+				<input id="section-selection-global" name="section-selection" checked="" type="radio" style="display: none;">
+				<div id="selection-pane-labels" style="display: flex; justify-content: center;">
+					<label class="selection-pane-label i18n" for="section-selection-ff-settings" style="
+					border-radius: 5px 0 0 5px;">firefoxSettingsSectionTitle</label>
+					<label class="selection-pane-label i18n" for="section-selection-global" style="
+					border-radius: 0 5px 5px 0;">globalSnoHazeSettingsSectionTitle</label>
+				</div>
+				<div id="selection-pane-pages">
+					<!-- firefox settings -->
+					<div class="selection-pane-page">
+						<table width=100%>
+							<colgroup>
+							   <col span="1" style="width: 60%;">
+							   <col span="1" style="width: 40%;">
+							</colgroup>
+							<tr>
+								<td>
+									<div class="i18n i18n-title" title="networkPredictionFirefoxSettingDescription" tabindex="0">networkPredictionFirefoxSettingName</div>
+								</td>
+								<td class="i18n" id="prediction_action">currentSettingsValueLoadingPlaceholder</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="i18n i18n-title" title="rtcFirefoxSettingDescription" tabindex="0">rtcFirefoxSettingName</div>
+								</td>
+								</td>
+								<td class="i18n" id="rtc_action">currentSettingsValueLoadingPlaceholder</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="i18n i18n-title" title="rtcIPFirefoxSettingDescription" tabindex="0">rtcIPFirefoxSettingName</div>
+								</td>
+								<td class="i18n" id="rtcip_action">currentSettingsValueLoadingPlaceholder</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="i18n i18n-title" title="cookiesFirefoxSettingDescription" tabindex="0">cookiesFirefoxSettingName</div>
+								</td>
+								<td class="i18n" id="cookie_action">currentSettingsValueLoadingPlaceholder</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="i18n i18n-title" title="isolateFirefoxSettingDescription" tabindex="0">isolateFirefoxSettingName</div>
+								</td>
+								<td class="i18n" id="isolate_action">currentSettingsValueLoadingPlaceholder</td>
+							</tr>
+							<!-- <tr>
+								<td>Ping</td>
+								<td id="ping_value">Loading</td>
+								<td>false</td>
+								<td id="ping_action"></td>
+							</tr> -->
+							<tr>
+								<td>
+									<div class="i18n i18n-title" title="referrerFirefoxSettingDescription" tabindex="0">referrerFirefoxSettingName</div>
+								</td>
+								<td class="i18n" id="referrer_action">currentSettingsValueLoadingPlaceholder</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="i18n i18n-title" title="resistFingerprintingFirefoxSettingDescription" tabindex="0">resistFingerprintingFirefoxSettingName</div>
+								</td>
+								<td class="i18n" id="resist_action">currentSettingsValueLoadingPlaceholder</td>
+							</tr>
+							<!-- ><tr>
+								<td>3rd Party Cookies</td>
+								<td id="3rd_cookies_value">Loading</td>
+								<td>false</td>
+								<td id="3rd_cookies_action"></td>
+							</tr> -->
+							<tr>
+								<td>
+									<div class="i18n i18n-title" title="trackingProtectionFirefoxSettingDescription" tabindex="0">trackingProtectionFirefoxSettingName</div>
+								</td>
+								<td class="i18n" id="tracking_protection_action">currentSettingsValueLoadingPlaceholder</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><a class="setall i18n" id="setall">setAllFirefoxSettingsToSuggestedValuesButtonTitle</a></td>
+							</tr>
+						</table>
+					</div>
+					<!-- snowhaze settings -->
+					<div class="selection-pane-page">
+						<table width=100%>
+							<colgroup>
+								<col span="1" style="width: 60%;">
+								<col span="1" style="width: 40%;">
+							</colgroup>
+							<tr>
+								<td>
+									<div class="i18n i18n-title" title="forceHTTPSSnowHazeSettingDescription" tabindex="0">forceHTTPSSnowHazeSettingName</div>
+								</td>
+								<td class="i18n" id="force_https_action">currentSettingsValueLoadingPlaceholder</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="i18n i18n-title" title="tryHTTPSFirstSnowHazeSettingDescription" tabindex="0">tryHTTPSFirstSnowHazeSettingName</div>
+								</td>
+								<td class="i18n" id="try_https_first_action">currentSettingsValueLoadingPlaceholder</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="i18n i18n-title" title="mixedContentBlockingSnowHazeSettingDescription" tabindex="0">mixedContentBlockingSnowHazeSettingName</div>
+								</td>
+								<td class="i18n" id="mixed_content_blocking_action">currentSettingsValueLoadingPlaceholder</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="i18n i18n-title" title="trimTrackingParametersSnowHazeSettingDescription" tabindex="0">trimTrackingParametersSnowHazeSettingName</div>
+								</td>
+								<td class="i18n" id="trim_tracking_parameters_action">currentSettingsValueLoadingPlaceholder</td>
+							</tr>
+							<tr id="forget_private_sites_row">
+								<td>
+									<div class="i18n i18n-title" title="forgetPrivateSitesSnowHazeSettingDescription" tabindex="0">forgetPrivateSitesSnowHazeSettingName</div>
+								</td>
+								<td class="i18n" id="forget_private_sites_action">currentSettingsValueLoadingPlaceholder</td>
+							</tr>
+							<tr><td></td></tr> <!-- keep last row empty -->
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/settings.js"></script>
+		<script src="/i18n.js"></script>
+		<script src="/popup.js"></script>
+	</body>
+</html>
